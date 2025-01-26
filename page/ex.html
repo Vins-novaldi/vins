@@ -4,277 +4,523 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+
+    <link rel="stylesheet" href="../assets/css/slick.css" />
+    <link rel="stylesheet" href="../assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="../assets/css/animate.min.css" />
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css" />
+    <link rel="stylesheet" href="../assets/css/select2.min.css" />
+    <link rel="stylesheet" href="../assets/css/select2-bootstrap4.min.css" />
+    <link rel="stylesheet" href="../assets/css/slick-animation.css" />
+
+    <link rel="stylesheet" href="../css/home.css"/>
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
   </head>
-  <style>
-    .navigation button {
-      background-color: transparent;
-      border: 1px solid #fff;
-      color: inherit;
-      font-size: 1rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      height: 50px;
-      transition: 0.5s ease;
-    }
-    .navigation button:hover {
-      cursor: pointer;
-      background-color: rgba(225, 225, 225, 0.4);
-    }
 
-    .showslide {
-      position: relative;
-      width: 100%;
-      height: 99vh;
-      border-radius: 20px;
-      overflow: hidden;
-      background-color: #6a6a6aa1;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      color: #fff;
-    }
-    .showslide .content {
-      width: 100%;
-      display: flex;
-    }
-    .showslide .introduce {
-      position: relative;
-      width: 40%;
-      height: 100%;
-      z-index: 20;
-    }
-    .introduce .wrapper {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: auto;
-      padding: 0 20px 0 50px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      pointer-events: none;
-    }
-    .introduce .wrapper span {
-      overflow: hidden;
-    }
-    .introduce .wrapper span > * {
-      transition: 0.5s ease;
-      opacity: 0;
-      transform: translateY(300px);
-      transition-delay: calc((3 - var(--idx)) * 0.1s);
-    }
-    .introduce .wrapper.active {
-      pointer-events: all;
-    }
-    .introduce .wrapper.active span > * {
-      opacity: 1;
-      transform: translateY(0);
-      transition-delay: calc(var(--idx) * 0.1s);
-    }
-    .introduce > *:not(.place) {
-      font-family: sans-serif;
-    }
-    .introduce .country {
-      font-size: 1.4rem;
-      font-weight: 400;
-    }
-    .introduce .place {
-      font-family: sans-serif;
-      font-size: 5.5rem;
-      font-weight: 400;
-      text-transform: uppercase;
-      line-height: 1.1;
-      letter-spacing: 1px;
-      margin-top: 10px;
-    }
-    .introduce .describe {
-      font-size: 1rem;
-      margin-top: 8px;
-      font-weight: 300;
-    }
-    .introduce .discover-button {
-      width: 250px;
-      height: 50px;
-      border-radius: 50px;
-      margin-top: 20px;
-    }
-    .showslide .content .thumnail-list {
-      position: relative;
-      height: 300px;
-      flex: 1;
-    }
-    .thumnail-list .wrapper {
-      position: relative;
-      z-index: 10;
-      height: 300px;
-    }
-    .thumnail-list .wrapper .thumnail {
-      position: absolute;
-      height: 300px;
-      width: 200px;
-      border-radius: 15px;
-      overflow: hidden;
-      transition: 0.75s cubic-bezier(0.6, 0.1, 0.3, 1);
-      transform: translateX(calc(var(--idx) * 10px));
-      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-    }
-    .thumnail-list .wrapper .thumnail.zoom {
-      width: 100px;
-      height: 100px;
-      transform: translate(-312px, -70px);
-      filter: brightness(40%);
-      box-shadow: none;
-    }
-    .wrapper .thumnail img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-    }
-    .showslide .navigation {
-      margin-left: 40%;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 50px 50px 50px 0;
-      z-index: 20;
-    }
-    .navigation .next-btn {
-      width: 180px;
-      border-radius: 50px;
-    }
-    .navigation .line {
-      flex: 1;
-      height: 2px;
-      background-color: #fff;
-    }
-    .navigation .ordinal-number {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 50px;
-      height: 50px;
-      overflow: hidden;
-    }
-    .ordinal-number h2 {
-      font-size: 3.5rem;
-      font-weight: 400;
-      line-height: 1;
-      position: absolute;
-      transform: translateY(20%);
-      transition: 0.5s ease;
-    }
-    .ordinal-number h2.active {
-      transform: translateY(0);
-    }
-  </style>
   <body>
-    <div class="showslide">
-      <div class="content">
-        <div class="introduce"></div>
-        <div class="thumnail-list">
-          <div class="wrapper"></div>
+    <section id="iq-trending" class="s-margin">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 overflow-hidden">
+            <div class="iq-main-header d-flex align-items-center justify-content-between">
+              <h4 class="main-title">Trending</h4>
+            </div>
+            <div class="trending-contens">
+              <ul id="trending-slider-nav" class="list-inline p-0 mb-0 row align-items-center">
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="movie-slick position-relative">
+                      <img src="../assets/image/banner/the-player-2.jpg" class="img-fluid" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="movie-slick position-relative">
+                      <img src="../Nerflix-website-main/images/trending/01.jpg" class="img-fluid" alt="">
+                    </div>
+                  </a>
+                </li>
+                
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="movie-slick position-relative">
+                      <img src="../Nerflix-website-main/images/trending/03.jpg" class="img-fluid" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="movie-slick position-relative">
+                      <img src="../Nerflix-website-main/images/trending/04.jpg" class="img-fluid" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="movie-slick position-relative">
+                      <img src="../Nerflix-website-main/images/trending/05.jpg" class="img-fluid" alt="">
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:void(0);">
+                    <div class="movie-slick position-relative">
+                      <img src="../Nerflix-website-main/images/trending/06.jpg" class="img-fluid" alt="">
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+              <ul id="trending-slider" class="list-inline p-0 m-0 d-flex align-items-center">
+                <li>
+                  <div class="tranding-block position-relative" style="background-image: url(../assets/image/banner/the-player-2.jpg);">
+                    <div class="trending-custom-tab">
+                      <div class="tab-title-info position-relative">
+                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center" role="tablist">
+                          <li class="nav-item">
+                            <a href="#trending-data1" class="nav-link active show" data-toggle="pill" role="tab" aria-selected="true">
+                              Overview
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#trending-data2" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                              Episodes
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#trending-data3" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                              Trailers
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="trending-content">
+                        <div id="trending-data1" class="overview-tab tab-pane fade active show">
+                          <div class="trending-info align-items-center w-100 animated fadeInUp">
+                            <a href="javascript:void(0);" tabindex="0">
+                              <div class="res-logo">
+                                <div class="channel-logo">
+                                  <img src="../assets/image/logo/V-logo (4).png" class="c-logo" alt="">
+                                </div>
+                              </div>
+                            </a>
+                            <h1 class="trending-text big-title text-uppercase">The Player 2</h1>
+                            <div class="d-flex align-items-center text-white text-detail">
+                              <span class="badge badge-secondary p-3">15+</span>
+                              <span class="ml-3">2 Seasons</span>
+                              <span class="trending-year">2024</span>
+                            </div>
+                            <div class="d-flex align-items-center series mb-4">
+                              <a href="javascript:void(0);">
+                                <img src="images/trending/trending-label.png" class="img-fluid" alt="">
+                              </a>
+                              <span class="text-gold ml-3">#3 in Drama Today</span>
+                            </div>
+                            <p class="trending-dec">
+                              A woman who moves into an appartment across the hall from two brilliant but social awkward physicists shows then how little they know about life outside of the laboratory.
+                            </p>
+                            <div class="p-btns">
+                              <div class="d-flex align-items-center p-0">
+                                <a href="#" class="btn btn-hover mr-2" tabindex="0">
+                                  <i class="fa fa-play mr-2"></i>
+                                  Play Now
+                                </a>
+                                <a href="#" class="btn btn-link" tabindex="0">
+                                  <i class="fa fa-plus pr-2"></i>
+                                  My List 
+                                </a>
+                              </div>
+                            </div>
+                            <div class="trending-list mt-4">
+                              <div class="text-primary title">
+                                Starring : 
+                                <span class="text-body">
+                                  Jhonny Galecki, Jim Parsons , Kaley Cuoco
+                                </span>
+                              </div>
+                              <div class="text-primary title">
+                                Genres :
+                                <span class="text-body">
+                                  Comedy Romance
+                                </span>
+                              </div>
+                              <div class="text-primary title">
+                                Creators :
+                                <span class="text-body">
+                                  Chuck Lorre, Bill Prady
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id="trending-data2" class="overlay-tab tab-pane fade">
+                          <div class="trending-info align-items-center w-100 animated fadeInUp">
+                            <a href="#" tabindex="0">
+                              <div class="channel-logo">
+                                <img src="../assets/image/logo/V-logo (4).png" class="c-logo" alt="">
+                              </div>
+                            </a>
+                            <h1 class="trending-text big-title text-uppercase">Big Bang Theory</h1>
+                            <div class="d-flex align-items-center text-white text-detail mb-4">
+                              <span class="season_date">
+                                12 Seasons 
+                              </span>
+                              <span class="trending-year">Feb 2019</span>
+                            </div>
+                            <div class="iq-custom-select d-inline-block sea-epi">
+                              <select name="Seasons" class="form-control season-select">
+                                <option value="Season1">Season 1</option>
+                                <option value="Season2">Season 2</option>
+                              </select>
+                            </div>
+
+                            <div class="episodes-contens mt-4">
+                              <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 m-0">
+                                <div class="e-item">
+                                  <div class="block-image position-relative">
+                                    <a href="#">
+                                      <img src="../assets/image/banner/the-player-2.jpg" class="img-fluid" alt="">
+                                    </a>
+                                    <div class="episode-play-info">
+                                      <div class="episode-play">
+                                        <a href="#" tabindex="0">
+                                          <i class="fa fa-play"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="episodes-description text-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <a href="#">Episode 1</a>
+                                      <span class="text-primary">2.25m</span>
+                                    </div>
+                                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque aliquam quisquam iure tempore earum sequi.</p>
+                                  </div>
+                                </div>                               
+                                <div class="e-item">
+                                  <div class="block-image position-relative">
+                                    <a href="#">
+                                      <img src="../assets/image/banner/the-player-2.jpg" class="img-fluid" alt="">
+                                    </a>
+                                    <div class="episode-play-info">
+                                      <div class="episode-play">
+                                        <a href="#" tabindex="0">
+                                          <i class="fa fa-play"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="episodes-description text-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <a href="#">Episode 2</a>
+                                      <span class="text-primary">2.25m</span>
+                                    </div>
+                                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque aliquam quisquam iure tempore earum sequi.</p>
+                                  </div>
+                                </div>                              
+                                <div class="e-item">
+                                  <div class="block-image position-relative">
+                                    <a href="#">
+                                      <img src="../assets/image/banner/the-player-2.jpg" class="img-fluid" alt="">
+                                    </a>
+                                    <div class="episode-play-info">
+                                      <div class="episode-play">
+                                        <a href="#" tabindex="0">
+                                          <i class="fa fa-play"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="episodes-description text-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <a href="#">Episode 3</a>
+                                      <span class="text-primary">2.25m</span>
+                                    </div>
+                                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque aliquam quisquam iure tempore earum sequi.</p>
+                                  </div>
+                                </div>                               
+                                <div class="e-item">
+                                  <div class="block-image position-relative">
+                                    <a href="#">
+                                      <img src="../assets/image/banner/the-player-2.jpg" class="img-fluid" alt="">
+                                    </a>
+                                    <div class="episode-play-info">
+                                      <div class="episode-play">
+                                        <a href="#" tabindex="0">
+                                          <i class="fa fa-play"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="episodes-description text-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <a href="#">Episode 4</a>
+                                      <span class="text-primary">2.25m</span>
+                                    </div>
+                                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque aliquam quisquam iure tempore earum sequi.</p>
+                                  </div>
+                                </div>                             
+                                <div class="e-item">
+                                  <div class="block-image position-relative">
+                                    <a href="#">
+                                      <img src="../assets/image/banner/the-player-2.jpg" class="img-fluid" alt="">
+                                    </a>
+                                    <div class="episode-play-info">
+                                      <div class="episode-play">
+                                        <a href="#" tabindex="0">
+                                          <i class="fa fa-play"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="episodes-description text-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <a href="#">Episode 5</a>
+                                      <span class="text-primary">2.25m</span>
+                                    </div>
+                                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque aliquam quisquam iure tempore earum sequi.</p>
+                                  </div>
+                                </div>                              
+                                <div class="e-item">
+                                  <div class="block-image position-relative">
+                                    <a href="#">
+                                      <img src="../assets/image/banner/the-player-2.jpg" class="img-fluid" alt="">
+                                    </a>
+                                    <div class="episode-play-info">
+                                      <div class="episode-play">
+                                        <a href="#" tabindex="0">
+                                          <i class="fa fa-play"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="episodes-description text-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <a href="#">Episode 6</a>
+                                      <span class="text-primary">2.25m</span>
+                                    </div>
+                                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque aliquam quisquam iure tempore earum sequi.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div id="trending-data3" class="overlay-tab tab-pane fade">
+                          <div class="trending-info align-items-center w-100 animated fadeInUp">
+                            <a href="#" tabindex="0">
+                              <div class="channel-logo">
+                                <img src="images/logo.png" class="c-logo" alt="">
+                              </div>
+                            </a>
+                            <h1 class="trending-text big-title text-uppercase">Big Bang Theory</h1>
+                            <div class="episodes-contens mt-4">
+                              <div class="owl-carousel owl-theme episodes-slider1 list-inline p-0 m-0">
+                                <div class="e-item">
+                                  <div class="block-image position-relative">
+                                    <a href="#">
+                                      <img src="../assets/image/banner/the-player-2(2).jpg" class="img-fluid" alt="">
+                                    </a>
+                                    <div class="episode-play-info">
+                                      <div class="episode-play">
+                                        <a href="#" tabindex="0">
+                                          <i class="fa fa-play"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="episodes-description text-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <a href="#">Trailer 1</a>
+                                      <span class="text-primary">2.25m</span>
+                                    </div>
+                                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque aliquam quisquam iure tempore earum sequi.</p>
+                                  </div>
+                                </div>
+                                <div class="e-item">
+                                  <div class="block-image position-relative">
+                                    <a href="#">
+                                      <img src="../assets/image/banner/the-player-2(2).jpg" class="img-fluid" alt="">
+                                    </a>
+                                    <div class="episode-play-info">
+                                      <div class="episode-play">
+                                        <a href="#" tabindex="0">
+                                          <i class="fa fa-play"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="episodes-description text-body">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                      <a href="#">Trailer 2</a>
+                                      <span class="text-primary">2.25m</span>
+                                    </div>
+                                    <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque aliquam quisquam iure tempore earum sequi.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- ===== -->
+                <li>
+                  <div class="tranding-block position-relative" style="background-image: url(../Nerflix-website-main/images/trending/01.jpg);">
+                    <div class="trending-custom-tab">
+                      <div class="tab-title-info position-relative">
+                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center" role="tablist">
+                          <li class="nav-item">
+                            <a href="#trending-data4" class="nav-link active show" data-toggle="pill" role="tab" aria-selected="true">
+                              Overview
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#trending-data5" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                              Episodes
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#trending-data6" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                              Trailers
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="trending-content">
+                        <div id="trending-data4" class="overview-tab tab-pane fade active show">
+                          <div class="trending-info align-items-center w-100 animated fadeInUp">
+                            <a href="javascript:void(0);" tabindex="0">
+                              <div class="res-logo">
+                                <div class="channel-logo">
+                                  <img src="../assets/image/logo/V-logo (4).png" class="c-logo" alt="">
+                                </div>
+                              </div>
+                            </a>    
+                          </div>
+                        </div>
+
+                        <div id="trending-data5" class="overlay-tab tab-pane fade">
+                          <div class="trending-info align-items-center w-100 animated fadeInUp">
+                            <a href="javascript:void(0);" tabindex="0">
+                              <div class="res-logo">
+                                <div class="channel-logo">
+                                  <img src="../assets/image/logo/V-logo (4).png" class="c-logo" alt="">
+                                </div>
+                              </div>
+                            </a>    
+                          </div>
+                        </div>
+
+                        <div id="trending-data6" class="overlay-tab tab-pane fade">
+                          <div class="trending-info align-items-center w-100 animated fadeInUp">
+                            <a href="javascript:void(0);" tabindex="0">
+                              <div class="res-logo">
+                                <div class="channel-logo">
+                                  <img src="../assets/image/logo/V-logo (4).png" class="c-logo" alt="">
+                                </div>
+                              </div>
+                            </a>    
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- ===== -->
+                <li>
+                  <div class="tranding-block position-relative" style="background-image: url(images/trending/03.jpg);">
+                    <div class="trending-custom-tab">
+                      <div class="tab-title-info position-relative">
+                        <ul class="trending-pills d-flex nav nav-pills justify-content-center align-items-center text-center" role="tablist">
+                          <li class="nav-item">
+                            <a href="#trending-data7" class="nav-link active show" data-toggle="pill" role="tab" aria-selected="true">
+                              Overview
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#trending-data8" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                              Episodes
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="#trending-data9" class="nav-link" data-toggle="pill" role="tab" aria-selected="false">
+                              Trailers
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="trending-content">
+                        <div id="trending-data7" class="overview-tab tab-pane fade active show">
+                          <div class="trending-info align-items-center w-100 animated fadeInUp">
+                            <a href="javascript:void(0);" tabindex="0">
+                              <div class="res-logo">
+                                <div class="channel-logo">
+                                  <img src="../assets/image/logo/V-logo (4).png" class="c-logo" alt="">
+                                </div>
+                              </div>
+                            </a>    
+                          </div>
+                        </div>
+
+                        <div id="trending-data8" class="overlay-tab tab-pane fade">
+                          <div class="trending-info align-items-center w-100 animated fadeInUp">
+                            <a href="javascript:void(0);" tabindex="0">
+                              <div class="res-logo">
+                                <div class="channel-logo">
+                                  <img src="../assets/image/logo/V-logo (4).png" class="c-logo" alt="">
+                                </div>
+                              </div>
+                            </a>    
+                          </div>
+                        </div>
+
+                        <div id="trending-data9" class="overlay-tab tab-pane fade">
+                          <div class="trending-info align-items-center w-100 animated fadeInUp">
+                            <a href="javascript:void(0);" tabindex="0">
+                              <div class="res-logo">
+                                <div class="channel-logo">
+                                  <img src="../assets/image/logo/V-logo (4).png" class="c-logo" alt="">
+                                </div>
+                              </div>
+                            </a>    
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>        
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="navigation">
-        <button class="next-btn">next</button>
-        <span class="line"></span>
-        <span class="ordinal-number"></span>
-      </div>
-    </div>
+    </section>
+    
   </body>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    const data = [
-      {
-        country: "Japan",
-        place: "Mount Fuji",
-        describe: "A breathtaking mountain in Japan.",
-        img: "aseets/image/doona.jpg",
-      },
-      {
-        country: "France",
-        place: "Eiffel Tower",
-        describe: "The iconic landmark in Paris.",
-        img: "/lowthumb/descendents-of-the-sun.jpg",
-      },
-      {
-        country: "USA",
-        place: "Grand Canyon",
-        describe: "A natural wonder in Arizona.",
-        img: "/lowthumb/kill-it.jpg",
-      },
-    ];
+    <script src="../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <script src="../assets/js/select2.min.js"></script>
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="../assets/js/slick-animation.min.js"></script>
 
-    const introduce = document.querySelector(".introduce");
-    const ordinalNumber = document.querySelector(".ordinal-number");
-
-    introduce.innerHTML = "";
-    ordinalNumber.innerHTML = "";
-    for (let i = 0; i < data.length; i++) {
-      introduce.innerHTML += `
-        <div class="wrapper">
-            <span>
-                <h5 class="country" style="--idx: 0">${data[i].country}</h5>
-            </span>
-            <span>
-                <h1 class="place"  style="--idx: 1">${data[i].place}</h1>
-            </span>
-            <span>
-                <p class="describe"  style="--idx: 2">${data[i].describe}</p>
-            </span>
-            <span>
-                <button class="discover-buttton"  style="--idx: 3">discover now</button>
-            </span>
-        </div>
-    `;
-
-      ordinalNumber.innerHTML += `<h2>${i + 1}</h2>`;
-    }
-    introduce.children[0].classList.add("active");
-    ordinalNumber.children[0].classList.add("active");
-
-    const thumnailListWrapper = document.querySelector(".thumnail-list");
-    thumnailListWrapper.innerHTML += `
-    <div class="thumnail zoom">
-        <img src="${data[0].img}" alt="">
-    </div>
-`;
-    for (let i = 1; i < data.length; i++) {
-      thumnailListWrapper.innerHTML += `
-    <div class="thumnail" style="--idx: ${i - 1}">
-        <img src="${data[i].img}" alt="">
-    </div>
-    `;
-    }
-    const nextBtn = document.querySelector(".navigation .next-btn");
-    var currenIndex = 0;
-    nextBtn.addEventListener("click", () => {
-      nextBtn.disabled = true;
-      var clone = thumnailListWrapper.children[0].cloneNode(true);
-      clone.classList.remove("zoom");
-      thumnailListWrapper.appendChild(clone);
-      thumnailListWrapper.children[1].classList.add("zoom");
-      setTimeout(() => {
-        thumnailListWrapper.children[0].remove();
-        nextBtn.disabled = false;
-      }, 1000);
-
-      for (let i = 2; i < thumnailListWrapper.childElementCount; i++) {
-        thumnailListWrapper.children[i].style = `--idx: ${i - 2}`;
-      }
-      if (currenIndex < data.length - 1) {
-        currenIndex++;
-      } else currenIndex = 0;
-      for (let i = 0; i < data.length; i++) {
-        introduce.children[i].classList.remove("active");
-        ordinalNumber.children[i].classList.remove("active");
-      }
-      introduce.children[currenIndex].classList.add("active");
-      ordinalNumber.children[currenIndex].classList.add("active");
-      ordinalNumber.children[currenIndex].textContent = `0${currenIndex + 1}`;
-    });
-  </script>
+    <script src="../js/main.js"></script>
+    <script src="../js/home.js"></script>
 </html>
