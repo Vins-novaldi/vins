@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>VinS</title>
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css">
+    <link rel="stylesheet" href="/css/home.css"/>
+    <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar py-2">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="/assets/image/logo/LogoVinS-1.png" alt="Logo" style="width: 100px; height: 30px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Drama</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Action</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Trends</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Mylist</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Konten untuk Desktop -->
+    <div class="container-fluid banner d-flex align-items-center justify-content-between d-none d-md-flex">
+      <div class="contentt big-mouth img-fluid active">
+        <img src="./" alt="" class="movie-title">
+        <h4><span>3018</span><span>12+</span><span>16 eps</span><span>romance</span></h4>
+        <p>A Heap prisoner makes a discovery; Carol searches for someone in the nearby forest; Rick and Morgan find themselves in the company of strangers.</p>
+        <div class="button">
+          <a href="#"><i class="fa-solid fa-play"></i>WATCH</a>
+          <a href="#"><i class="fa-solid fa-plus"></i>Mylist</a>
+        </div>
+      </div>
+      <div class="contentt crash-landing-on-you img-fluid">
+        <img src="./" alt="" class="movie-title">
+        <h4><span>3018</span><span>12+</span><span>16 eps</span><span>romance</span></h4>
+        <p>A Heap prisoner makes a discovery; Carol searches for someone in the nearby forest; Rick and Morgan find themselves in the company of strangers.</p>
+        <div class="button">
+          <a href="#"><i class="fa-solid fa-play"></i>WATCH</a>
+          <a href="#"><i class="fa-solid fa-plus"></i>Mylist</a>
+        </div>
+      </div>
+      <div class="contentt descendents-of-the-sun img-fluid">
+        <img src="./" alt="" class="movie-title">
+        <h4><span>3018</span><span>12+</span><span>16 eps</span><span>romance</span></h4>
+        <p>A Heap prisoner makes a discovery; Carol searches for someone in the nearby forest; Rick and Morgan find themselves in the company of strangers.</p>
+        <div class="button">
+          <a href="#"><i class="fa-solid fa-play"></i>WATCH</a>
+          <a href="#"><i class="fa-solid fa-plus"></i>Mylist</a>
+        </div>
+      </div>
+      <div class="contentt kill-it img-fluid">
+        <img src="./" alt="" class="movie-title">
+        <h4><span>3018</span><span>12+</span><span>16 eps</span><span>romance</span></h4>
+        <p>A Heap prisoner makes a discovery; Carol searches for someone in the nearby forest; Rick and Morgan find themselves in the company of strangers.</p>
+        <div class="button">
+          <a href="#"><i class="fa-solid fa-play"></i>WATCH</a>
+          <a href="#"><i class="fa-solid fa-plus"></i>Mylist</a>
+        </div>
+      </div>
+      <div class="contentt vagabond img-fluid">
+        <img src="./" alt="" class="movie-title">
+        <h4><span>3018</span><span>12+</span><span>16 eps</span><span>romance</span></h4>
+        <p>A Heap prisoner makes a discovery; Carol searches for someone in the nearby forest; Rick and Morgan find themselves in the company of strangers.</p>
+        <div class="button">
+          <a href="#"><i class="fa-solid fa-play"></i>WATCH</a>
+          <a href="#"><i class="fa-solid fa-plus"></i>Mylist</a>
+        </div>
+      </div>
+      <div class="boxx ">
+        <div class="slider1">
+          <div class="mx-3">
+            <div class="movie-card p-0" onclick="changeBg('bg-big-mouth.jpg', 'big-mouth');">
+              <img src="/assets/image/poster/big mouth.png" class="card-img-top mb-2" alt="big-mouth">
+            </div>
+          </div>
+          <div class="mx-3">
+            <div class="movie-card p-0" onclick="changeBg('bg-crash-landing-on-you.jpg', 'crash-landing-on-you');">
+              <img src="/assets/image/poster/crash landing on you.png" class="card-img-top mb-2" alt="crash-landing-on-you">
+            </div>
+          </div>
+          <div class="mx-3" onclick="changeBg('bg-descendents-of-the-sun.jpg', 'descendents-of-the-sun');">
+            <div class="movie-card p-0" >
+              <img src="/assets/image/poster/Descendants Of The Sun 1.jpg" class="card-img-top mb-2" alt="descendents-of-the-sun">
+            </div>
+          </div>
+          <div class="mx-3" onclick="changeBg('bg-kill-it.jpg', 'kill-it');">
+            <div class="movie-card p-0" >
+              <img src="/assets/image/poster/kill it.jpg" class="card-img-top mb-2" alt="kill-it'">
+            </div>
+          </div>
+          <div class="mx-3" onclick="changeBg('bg-vagabond.jpg', 'vagabond');">
+            <div class="movie-card p-0" >
+              <img src="/assets/image/poster/vagabond.png" class="card-img-top mb-2" alt="vagabond">
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="play" onClick="toggleVideo();"><i class="fa-regular fa-circle-play"></i>WATCH trailer</p>
+    </div>
+     <!-- Konten untuk mobile -->
+    <div id="carouselExampleAutoplaying  d-md-none" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner main-banner mt-5">
+        <div class="carousel-item active">
+          <div class="banner-image">
+            <img class="img-fluid" alt="" src="lowthumb/bg-kill-it.jpg" />
+          </div>
+          <div class="content">
+            <h1>Kill It</h1>
+            <p><span class="rating"><i class="fa-solid fa-star"></i> </i>7.5 </span>Season - Episode 12</p>
+            <p class="banner-text">A Heap prisoner makes a discovery; Carol searches for someone in the nearby forest; Rick and Morgan find themselves in the company of strangers.</p>
+            <button class="btn btn-primary" style="background-color: #00d9ff;">
+              <i class="fas fa-play"></i> WATCH
+            </button>
+            <button class="btn btn-secondary">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="banner-image">
+            <img class="img-fluid" alt="" src="lowthumb/bg-big-mouth.jpg" />
+          </div>
+          <div class="content">
+            <h1>Big Mouth</h1>
+            <p><span class="rating"><i class="fa-solid fa-star"></i> </i>7.5 </span>Season - Episode 12</p>
+            <p class="banner-text">A Heap prisoner makes a discovery; Carol searches for someone in the nearby forest; Rick and Morgan find themselves in the company of strangers.</p>
+            <button class="btn btn-primary" style="background-color: #00d9ff;">
+              <i class="fas fa-play"></i> WATCH
+            </button>
+            <button class="btn btn-secondary">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="banner-image">
+            <img class="img-fluid" alt="" src="lowthumb/bg-crash-landing-on-you.jpg" />
+          </div>
+          <div class="content">
+            <h1>Crash Landing On You</h1>
+            <p><span class="rating"><i class="fa-solid fa-star"></i> </i>7.5 </span>Season - Episode 12</p>
+            <p class="banner-text">A Heap prisoner makes a discovery; Carol searches for someone in the nearby forest; Rick and Morgan find themselves in the company of strangers.</p>
+            <button class="btn btn-primary" style="background-color: #00d9ff;">
+              <i class="fas fa-play"></i> WATCH
+            </button>
+            <button class="btn btn-secondary">
+              <i class="fa-regular fa-bookmark"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="trailer">
+      <video src="vidio/Vagabond _ Official Trailer _ Netflix.mp4" muted controls="true" autoplay="true"></video>
+      <p class="close" onClick="toggleVideo();"><i class="fa-solid fa-x"></i></p>
+    </div>
+
+
+
+    <!-- --------------------------------------------------------------------------- -->
+    <div class="container-fluid p-4">
+      <div class="section-title">Trends Now</div>
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="category-buttons " >
+          <button class="btn btn-primary">Popular</button>
+          <button class="btn btn-primary">Premieres</button>
+          <button class="btn btn-primary">Recently Added</button>
+          <button class="btn btn-primary" style="background-color: #00d9ff;">Action</button>
+          <button class="btn btn-primary">Adventure</button>
+          <button class="btn btn-primary">Animation</button>
+          <button class="btn btn-primary">Biography</button>
+          <button class="btn btn-primary">Crime</button>
+          <button class="btn btn-primary">Comedy</button>
+          <button class="btn btn-primary">Documentary</button>
+          <button class="btn btn-primary">Drama</button>
+        </div>
+      </div>
+      <div class="scroll-container-wrapper">
+        <button class="scroll-btn left" onclick="scrollLeft(this)">&lt;</button>
+        <utton class="scroll-btn right" onclick="scrollRight(this)">&gt;</utton>
+        <div class="scroll-container">
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/vagabond.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Vagabond</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/crash landing on you.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Crash Landing on You</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/k2.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">The K 2</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/18 Again.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">18 Again</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/20th centaury girs.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">20th centaury girs</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/all the we loved.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">all the we loved</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Backstreet Rookie.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Backstreet Rookie</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Be My Boyfriend.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Be My Boyfriend</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/big mouth.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">big mount</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Bring It On, Ghost.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Bring It On, Ghos</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/buisness proposal.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">buisness proposal</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/death game.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">death game</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Descendants Of The Sun 1.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Descendants Of The Sun</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/dokgo rewind.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">dokgo rewind</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/doona.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">doona</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Extracurricular.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Extracurricular</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/hapinesss.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">hapinesss</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Hidden love.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Hidden love</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/kill it.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">kill it</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/king-the-land-poster.jpeg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">king the land</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/mouse.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">mouse</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/moving.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">moving</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/my demon.jpeg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">my demon</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/my man is cupid.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">my man is cupid</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/my name.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">my name</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Nevertheless.jpeg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Nevertheless</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/night has come.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">night has come</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/numbers.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">numbers</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Replay_ The Moment When It Starts Again.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Replay: The Moment When It Starts Again</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Revenge of Others.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Revenge of Others</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/She Would Never Know.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">She Would Never Know</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Soundtrack 1.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Soundtrack 1</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/special delivery.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">special delivery</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Start-Up.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Start-Up</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Suspicious Partner.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Suspicious Partner</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/the worst of evil.jpeg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">the worst of evil</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/twinkling watermelon.jpeg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">twinkling watermelon</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/User Not Found.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">User Not Found</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/vagabond.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">vagabond</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/vagabond2.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">vagabond</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/vigilante.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">vigilante</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/vincenzo.jpeg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">vincenzo</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/w two word.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">w two word</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Weak Hero Class.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Weak Hero Class</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/What wrong with secretary kim.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">What wrong with secretary kim</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Who Are You_ School 2015.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Who Are You_ School 2015</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="section-title">Drama</div>
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="category-buttons">
+          <button class="btn btn-outline-light">Series</button>
+          <button class="btn btn-outline-light">Original Series</button>
+          <button class="btn btn-danger">Action</button>
+          <button class="btn btn-outline-light">Adventure</button>
+          <button class="btn btn-outline-light">Animation</button>
+          <button class="btn btn-outline-light">Biography</button>
+          <button class="btn btn-outline-light">Crime</button>
+          <button class="btn btn-outline-light">Comedy</button>
+          <button class="btn btn-outline-light">Documentary</button>
+          <button class="btn btn-outline-light">Drama</button>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="mx-3">
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/big mouth.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Who Are You_ School 2015</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="mx-3">
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/crash landing on you.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Who Are You_ School 2015</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="mx-3">
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/big mouth.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Who Are You_ School 2015</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="mx-3">
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/crash landing on you.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Who Are You_ School 2015</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="mx-3">
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/dokgo rewind.png" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Who Are You_ School 2015</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="mx-3">
+          <div class="movie-card p-0" >
+            <img src="/assets/image/poster/Descendants Of The Sun 1.jpg" class="card-img-top mb-2" alt="Pacific Rim 2">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Who Are You_ School 2015</h6>
+              <span class="card-detail d-flex justify-content-between">
+                <p class="year">2018</p>
+                <p class="rating">⭐ 5.8</p>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------------- -->
+    <div class="container-xxl main-banner">
+      <div class="banner-image">
+        <img class="img-fluid" alt="" src="/assets/image/banner/the-player-2.jpg"/>
+      </div>
+      <div class="content">
+        <p>Duration: 51m</p>
+        <p><span class="rating"><i class="fa-solid fa-star"></i> </i>7.5 </span>Season - Episode 12</p>
+        <h1>The Player 2</h1>
+        <p class="banner-text">A Heap prisoner makes a discovery; Carol searches for someone in the nearby forest; Rick and Morgan find themselves in the company of strangers.</p>
+        <button class="btn btn-primary" style="background-color: #00d9ff;"><i class="fas fa-play"> </i>WATCH</button>
+        <button class="btn btn-secondary"><i class="fas fa-plus"> </i> ADD LIST</button>
+      </div>
+    </div>
+    
+
+    
+    <div class="footer">
+      <p>© 2023 Netflix Clone. All rights reserved.</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="/js/home.js"></script>
+    <script src="/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+

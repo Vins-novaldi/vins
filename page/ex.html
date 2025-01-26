@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .navigation button {
+      background-color: transparent;
+      border: 1px solid #fff;
+      color: inherit;
+      font-size: 1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      height: 50px;
+      transition: 0.5s ease;
+    }
+    .navigation button:hover {
+      cursor: pointer;
+      background-color: rgba(225, 225, 225, 0.4);
+    }
+
+    .showslide {
+      position: relative;
+      width: 100%;
+      height: 99vh;
+      border-radius: 20px;
+      overflow: hidden;
+      background-color: #6a6a6aa1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      color: #fff;
+    }
+    .showslide .content {
+      width: 100%;
+      display: flex;
+    }
+    .showslide .introduce {
+      position: relative;
+      width: 40%;
+      height: 100%;
+      z-index: 20;
+    }
+    .introduce .wrapper {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      padding: 0 20px 0 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      pointer-events: none;
+    }
+    .introduce .wrapper span {
+      overflow: hidden;
+    }
+    .introduce .wrapper span > * {
+      transition: 0.5s ease;
+      opacity: 0;
+      transform: translateY(300px);
+      transition-delay: calc((3 - var(--idx)) * 0.1s);
+    }
+    .introduce .wrapper.active {
+      pointer-events: all;
+    }
+    .introduce .wrapper.active span > * {
+      opacity: 1;
+      transform: translateY(0);
+      transition-delay: calc(var(--idx) * 0.1s);
+    }
+    .introduce > *:not(.place) {
+      font-family: sans-serif;
+    }
+    .introduce .country {
+      font-size: 1.4rem;
+      font-weight: 400;
+    }
+    .introduce .place {
+      font-family: sans-serif;
+      font-size: 5.5rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      line-height: 1.1;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+    .introduce .describe {
+      font-size: 1rem;
+      margin-top: 8px;
+      font-weight: 300;
+    }
+    .introduce .discover-button {
+      width: 250px;
+      height: 50px;
+      border-radius: 50px;
+      margin-top: 20px;
+    }
+    .showslide .content .thumnail-list {
+      position: relative;
+      height: 300px;
+      flex: 1;
+    }
+    .thumnail-list .wrapper {
+      position: relative;
+      z-index: 10;
+      height: 300px;
+    }
+    .thumnail-list .wrapper .thumnail {
+      position: absolute;
+      height: 300px;
+      width: 200px;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: 0.75s cubic-bezier(0.6, 0.1, 0.3, 1);
+      transform: translateX(calc(var(--idx) * 10px));
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+    }
+    .thumnail-list .wrapper .thumnail.zoom {
+      width: 100px;
+      height: 100px;
+      transform: translate(-312px, -70px);
+      filter: brightness(40%);
+      box-shadow: none;
+    }
+    .wrapper .thumnail img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+    .showslide .navigation {
+      margin-left: 40%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 50px 50px 50px 0;
+      z-index: 20;
+    }
+    .navigation .next-btn {
+      width: 180px;
+      border-radius: 50px;
+    }
+    .navigation .line {
+      flex: 1;
+      height: 2px;
+      background-color: #fff;
+    }
+    .navigation .ordinal-number {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+    }
+    .ordinal-number h2 {
+      font-size: 3.5rem;
+      font-weight: 400;
+      line-height: 1;
+      position: absolute;
+      transform: translateY(20%);
+      transition: 0.5s ease;
+    }
+    .ordinal-number h2.active {
+      transform: translateY(0);
+    }
+  </style>
+  <body>
+    <div class="showslide">
+      <div class="content">
+        <div class="introduce"></div>
+        <div class="thumnail-list">
+          <div class="wrapper"></div>
+        </div>
+      </div>
+
+      <div class="navigation">
+        <button class="next-btn">next</button>
+        <span class="line"></span>
+        <span class="ordinal-number"></span>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const data = [
+      {
+        country: "Japan",
+        place: "Mount Fuji",
+        describe: "A breathtaking mountain in Japan.",
+        img: "aseets/image/doona.jpg",
+      },
+      {
+        country: "France",
+        place: "Eiffel Tower",
+        describe: "The iconic landmark in Paris.",
+        img: "/lowthumb/descendents-of-the-sun.jpg",
+      },
+      {
+        country: "USA",
+        place: "Grand Canyon",
+        describe: "A natural wonder in Arizona.",
+        img: "/lowthumb/kill-it.jpg",
+      },
+    ];
+
+    const introduce = document.querySelector(".introduce");
+    const ordinalNumber = document.querySelector(".ordinal-number");
+
+    introduce.innerHTML = "";
+    ordinalNumber.innerHTML = "";
+    for (let i = 0; i < data.length; i++) {
+      introduce.innerHTML += `
+        <div class="wrapper">
+            <span>
+                <h5 class="country" style="--idx: 0">${data[i].country}</h5>
+            </span>
+            <span>
+                <h1 class="place"  style="--idx: 1">${data[i].place}</h1>
+            </span>
+            <span>
+                <p class="describe"  style="--idx: 2">${data[i].describe}</p>
+            </span>
+            <span>
+                <button class="discover-buttton"  style="--idx: 3">discover now</button>
+            </span>
+        </div>
+    `;
+
+      ordinalNumber.innerHTML += `<h2>${i + 1}</h2>`;
+    }
+    introduce.children[0].classList.add("active");
+    ordinalNumber.children[0].classList.add("active");
+
+    const thumnailListWrapper = document.querySelector(".thumnail-list");
+    thumnailListWrapper.innerHTML += `
+    <div class="thumnail zoom">
+        <img src="${data[0].img}" alt="">
+    </div>
+`;
+    for (let i = 1; i < data.length; i++) {
+      thumnailListWrapper.innerHTML += `
+    <div class="thumnail" style="--idx: ${i - 1}">
+        <img src="${data[i].img}" alt="">
+    </div>
+    `;
+    }
+    const nextBtn = document.querySelector(".navigation .next-btn");
+    var currenIndex = 0;
+    nextBtn.addEventListener("click", () => {
+      nextBtn.disabled = true;
+      var clone = thumnailListWrapper.children[0].cloneNode(true);
+      clone.classList.remove("zoom");
+      thumnailListWrapper.appendChild(clone);
+      thumnailListWrapper.children[1].classList.add("zoom");
+      setTimeout(() => {
+        thumnailListWrapper.children[0].remove();
+        nextBtn.disabled = false;
+      }, 1000);
+
+      for (let i = 2; i < thumnailListWrapper.childElementCount; i++) {
+        thumnailListWrapper.children[i].style = `--idx: ${i - 2}`;
+      }
+      if (currenIndex < data.length - 1) {
+        currenIndex++;
+      } else currenIndex = 0;
+      for (let i = 0; i < data.length; i++) {
+        introduce.children[i].classList.remove("active");
+        ordinalNumber.children[i].classList.remove("active");
+      }
+      introduce.children[currenIndex].classList.add("active");
+      ordinalNumber.children[currenIndex].classList.add("active");
+      ordinalNumber.children[currenIndex].textContent = `0${currenIndex + 1}`;
+    });
+  </script>
+</html>

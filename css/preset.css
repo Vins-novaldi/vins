@@ -1,0 +1,60 @@
+/* warna */
+div{
+    color: #00d9ff;
+    color: #007bff;
+    color: #001bff;
+    color: #fefefe;
+    color: #f9f9f9;
+    color: #f5f5f5;
+    color: #f0f0f0;
+    color: #e0e0e0;
+    color: #ddd / #dcdcdc;
+    color: #d3d3d3;
+    color: #cdcdcd;
+    color: #f5f5dc;
+}
+
+
+
+/* Bayangan standar */
+div {
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Bayangan dengan efek lebih besar dan lebih kabur */
+div {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Bayangan dengan efek inset (bayangan di dalam elemen) */
+div {
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Bayangan ganda */
+div {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3), -2px -2px 5px rgba(0, 0, 0, 0.2);
+}
+/* 3d */
+div{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), 
+            -5px -5px 10px rgba(0, 0, 0, 0.1),
+            5px 5px 15px rgba(0, 0, 0, 0.15), 
+            -5px -5px 15px rgba(0, 0, 0, 0.1);
+
+}
+
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
