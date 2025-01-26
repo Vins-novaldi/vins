@@ -13,7 +13,7 @@
       rgb(51 43 43 / 75%),
       rgb(20 19 20 / 61%)
     ),
-    url(./Images/background-banner.jpg);
+    url(/assets/image/bg/netflix_bg.jpg);
   max-height: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
