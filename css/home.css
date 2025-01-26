@@ -142,13 +142,13 @@ body::-webkit-scrollbar {
     z-index: 1;
 }
 #home-slider .slick-bg.s-bg-1{
-    background-image: url(/assets/image/banner/bg-vagabond.jpg);
+    background-image: url(.assets/image/banner/bg-vagabond.jpg);
 }
 #home-slider .slick-bg.s-bg-2{
-    background-image: url(/assets/image/banner/bg-big-mouth.jpg);
+    background-image: url(.assets/image/banner/bg-big-mouth.jpg);
 }
 #home-slider .slick-bg.s-bg-3{
-    background-image: url(/assets/image/banner/the-player-2.jpg);
+    background-image: url(.assets/image/banner/the-player-2.jpg);
 }
 
 .slick-bg::before{
